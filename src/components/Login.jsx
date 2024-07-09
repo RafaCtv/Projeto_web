@@ -1,7 +1,18 @@
 import React from "react"
 import "./style/CreateUser.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+    const navigate = useNavigate();
+
+    const handleRegister = (event) => {
+        event.preventDefault();
+        // Adicione aqui a lógica para registrar o usuário
+  
+        // Após o registro bem-sucedido, redirecione o usuário para a página principal
+        navigate("/menu");
+    }
+
     return (
         <div className="wrapper">
         <div className="h1-centro">
@@ -10,11 +21,12 @@ const Login = () => {
         <div className="container main">
           <div className="row">
             <div className="col-md-6 side-image">
-              {/* Adicione o conteúdo da imagem ou outros componentes aqui */}
             </div>
             <div className="col-md-6 right">
               <div className="input-box">
                 <header>Login</header>
+                <form onSubmit={handleRegister}>
+
                 <div className="input-field">
                   <input type="text" className="input" id="email" required autoComplete="off" />
                   <label htmlFor="email">Email</label>
@@ -26,8 +38,9 @@ const Login = () => {
                 <div className="input-field">
                   <input type="submit" className="submit" value="Entrar" />
                 </div>
+                </form>
                 <div className="signin">
-                  <span>Não possui uma conta? <a href="#">Registre-se aqui</a></span>
+                  <span>Não possui uma conta? <Link to="/">Entre aqui</Link></span>
                 </div>
               </div>
             </div>

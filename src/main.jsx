@@ -22,23 +22,23 @@ const router = createBrowserRouter([
     element: <Login />
   },
   {
-    path: 'consultar',
-    element: <Consultar />
-  },
-  {
     path: 'menu',
     element: <MenuPrincipal />
   },
   {
-    path: 'alterar',
+    path: 'menu/consultar',
+    element: <Consultar />
+  },
+  {
+    path: 'menu/alterar',
     element: <Alterar />
   },
   {
-    path: 'adicionar',
+    path: 'menu/adicionar',
     element: <Adicionar />
   },
   {
-    path: 'deletar',
+    path: 'menu/deletar',
     element: <Deletar />
   },
 ])

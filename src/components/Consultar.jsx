@@ -6,5 +6,5 @@ const Consultar = () => {
         <div></div>
     )
 }
-
+ 
 export default Consultar
